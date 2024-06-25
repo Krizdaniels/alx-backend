@@ -6,6 +6,7 @@
 from collections import OrderedDict
 from base_caching import BaseCaching
 
+
 class FIFOCache(BaseCaching):
     '''A class `FIFOCache` that inherits from
        `BaseCaching` and is a caching system.
