@@ -3,10 +3,8 @@
 '''Task 1: The FIFO caching
 '''
 
-
 from collections import OrderedDict
 from base_caching import BaseCaching
-
 
 class FIFOCache(BaseCaching):
     '''A class `FIFOCache` that inherits from
@@ -21,11 +19,10 @@ class FIFOCache(BaseCaching):
         '''assign to the dictionary `self.cache_data` the
            `item` value for the key `key`
         '''
-
         if key is None or item is None:
             return
 
-        if len(self.cache_data) > BaseCaching.MAX_ITEMS:
+        if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
             first_key, _ = self.cache_data.popitem(last=False)
             print(f"DISCARD: {first_key}")
 
